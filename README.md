@@ -2,6 +2,7 @@
 > Spring Boot 기반의 협업 프로젝트 관리 서비스
 ---
 ## 🧑‍💻 프로젝트 소개
+[보고서](https://www.miricanvas.com/login?redirect=%2Fv2%2Fko%2Fdesign2%2F88057da2-d084-4f89-9045-aff87522bdb0%3Flocation%3Ddesign%26type%3Dcopy_link%26access%3Dlink%26permission%3Dviewer)
 #### 개발 기간 : 2026.05.14 - 2026.05.22 (9일)
 - 본 프로젝트는 프로젝트, 업무(Task), 댓글, 태그, 마일스톤 기능을 제공하는 협업 플랫폼입니다.
 - Spring Boot 기반으로 개발되었으며, Spring Security와 Redis Session 기반 인증 구조 및 API 분리 아키텍처를 적용한 **4인 팀 프로젝트**입니다.
@@ -187,16 +188,8 @@ Gateway Server
 
 ---
 
-## 🌱 회고 및 개선 예정 사항
-### 💬 회고
+## 🌱 회고
 - 단기 프로젝트 특성상 기능 구현에 집중하면서 Validation을 단순하게 처리했으나, 사용자 경험 측면에서 입력 검증의 중요성을 체감했습니다.
 - Spring MVC + Thymeleaf 기반 SSR 구조에서 Validation 실패 시 화면 재구성 로직이 Controller에 집중되는 구조적 한계를 경험했습니다.
 - Front / Gateway / API 분리 구조를 통해 계층별 책임 분리의 중요성을 이해했습니다.
 - Redis Session Clustering을 통해 분산 환경에서 인증 상태를 유지하는 구조를 설계하는 경험을 했습니다.
-
-### 리팩토링 예정
-- Spring Cloud Netflix Eureka 기반 Service Discovery 적용
-- Front Server 책임 분리 (Service Layer 강화)
-- Validation 일부를 JavaScript 기반 사전 검증으로 이동
-- Controller의 View Model 생성 로직 Service Layer로 이동
-- SonarQube 기반 코드 품질 개선
